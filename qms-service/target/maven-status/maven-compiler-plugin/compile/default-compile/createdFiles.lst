@@ -1,0 +1,14 @@
+com\swiftyquote\qms\exception\ApiErrors.class
+com\swiftyquote\qms\client\WorkflowClient.class
+com\swiftyquote\qms\entity\Quotation.class
+com\swiftyquote\qms\repository\QuotationRepository.class
+com\swiftyquote\qms\dto\QuotationRequest.class
+com\swiftyquote\qms\controller\QuotationController$Decision.class
+com\swiftyquote\qms\entity\QuotationItem.class
+com\swiftyquote\qms\client\WorkflowClient$ApprovalRequest.class
+com\swiftyquote\qms\controller\QuotationController.class
+com\swiftyquote\qms\client\WorkflowClient$ApprovalReply.class
+com\swiftyquote\qms\service\QuotationService.class
+com\swiftyquote\qms\QmsApplication.class
+com\swiftyquote\qms\dto\QuotationRequest$Line.class
+com\swiftyquote\qms\dto\QuotationResponse.class

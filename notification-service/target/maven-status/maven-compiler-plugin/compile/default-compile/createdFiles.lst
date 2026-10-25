@@ -1,0 +1,5 @@
+com\swiftyquote\notification\entity\NotificationRecord.class
+com\swiftyquote\notification\controller\NotificationController.class
+com\swiftyquote\notification\NotificationApplication.class
+com\swiftyquote\notification\repository\NotificationRepository.class
+com\swiftyquote\notification\service\NotificationConsumer.class

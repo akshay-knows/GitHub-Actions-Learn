@@ -1,0 +1,185 @@
+{
+  "info": {
+    "name": "SwiftyQuote Simple Microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1 Create quotation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/quotations",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerId\": 101,\n  \"customerName\": \"Demo Dealer\",\n  \"items\": [\n    {\n      \"productName\": \"Modular Switch\",\n      \"quantity\": 10,\n      \"unitPrice\": 250\n    },\n    {\n      \"productName\": \"MCB\",\n      \"quantity\": 2,\n      \"unitPrice\": 500\n    }\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "2 List paginated quotations",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/quotations?page=0&size=10"
+      }
+    },
+    {
+      "name": "3 Get quotation",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/quotations/1"
+      }
+    },
+    {
+      "name": "4 Unique: quotation preview with items",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/quotations/1/preview"
+      }
+    },
+    {
+      "name": "5 Submit quotation approval",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/quotations/1/submit-approval"
+      }
+    },
+    {
+      "name": "6 Get workflow approval",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/approvals/1"
+      }
+    },
+    {
+      "name": "7 Manager approve quotation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/approvals/1/approve"
+      }
+    },
+    {
+      "name": "8 Manager reject (alternative to approve)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/approvals/1/reject",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reason\": \"Discount exceeds approved limit\"\n}"
+        }
+      }
+    },
+    {
+      "name": "9 List generated mock emails",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8083/api/notifications?page=0&size=10"
+      }
+    },
+    {
+      "name": "10 Eureka dashboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8761/"
+      }
+    },
+    {
+      "name": "11 QMS actuator health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/actuator/health"
+      }
+    },
+    {
+      "name": "12 Workflow actuator health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/actuator/health"
+      }
+    },
+    {
+      "name": "13 Notification actuator health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8083/actuator/health"
+      }
+    }
+  ]
+}

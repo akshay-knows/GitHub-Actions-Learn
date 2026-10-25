@@ -1,0 +1,9 @@
+com\swiftyquote\workflow\controller\ApprovalController.class
+com\swiftyquote\workflow\service\ApprovalService.class
+com\swiftyquote\workflow\controller\ApprovalController$NewApproval.class
+com\swiftyquote\workflow\WorkflowApplication.class
+com\swiftyquote\workflow\config\KafkaTopicConfig.class
+com\swiftyquote\workflow\exception\ApiErrors.class
+com\swiftyquote\workflow\controller\ApprovalController$Decision.class
+com\swiftyquote\workflow\repository\ApprovalRepository.class
+com\swiftyquote\workflow\entity\Approval.class
